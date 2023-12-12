@@ -1,0 +1,612 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Human activity recognition using deep electroencephalography learning.
+\end_layout
+
+\begin_layout Standard
+introduces a deep learning-based framework for classifying EEG artifacts
+ (FCEA)
+\end_layout
+
+\begin_layout Standard
+involving a Convolutional Neural Network and a Long Short-Term Memory Recurrent
+ Neural Network.
+\end_layout
+
+\begin_layout Standard
+a 3-class dataset of EEG activities was created.
+\end_layout
+
+\begin_layout Standard
+ameras, accelerometers, gyroscopes and sound sensors have been used to detect
+ the movement of users in automatic Human Activity Recognition (HAR) systems.
+\end_layout
+
+\begin_layout Standard
+In HAR system design, Machine Learning (ML) algorithms have made signiﬁcant
+ progress in the extraction of human activity fea- tures from sensor data.
+\end_layout
+
+\begin_layout Standard
+7% of the studies used only a combination of CNNs and RNNs, whereas, 40
+ % used only CNNs and 14 % used only RNNs.
+\end_layout
+
+\begin_layout Standard
+whilst reading printed text, speaking out loudly and watching a TV program.
+\end_layout
+
+\begin_layout Standard
+The technologies used for detecting human actions are commonly based on
+ heterogeneous sensors placed throughout the environment, such as cameras
+ and wearable sensors equipped with accelerometers, gyroscopes and biosensors
+ [1–4].
+ Cameras provide video data in form of a 3D matrix.
+\end_layout
+
+\begin_layout Standard
+The CNNs are more appropriate for learning and interpreting camera and motion-de
+tection sensor data.
+ The LSTM networks are not capable of classifying video data alone.
+ They, however, attain a desirable classiﬁcation performance when they are
+ used for modeling accelerometer and gyroscope raw data, as well as the
+ feature maps populated by a CNN [2].
+\end_layout
+
+\begin_layout Standard
+Moreover, the smartphone and smartwatches which have been mostly used in
+ HAR, are not suitable for recognizing facial activities.
+\end_layout
+
+\begin_layout Standard
+Analyzing and training a neural network on EGG (Electroencephalography)
+ data involves several steps.
+ Here's a general guide to get you started:
+\end_layout
+
+\begin_layout Standard
+1.
+ **Understand the EGG Data:** - Familiarize yourself with the structure
+ and characteristics of the EEG data you have.
+ Understand the number of channels, sampling frequency, and the duration
+ of the recordings.
+\end_layout
+
+\begin_layout Standard
+2.
+ **Preprocess the Data:** - Clean the data by removing artifacts and noise.
+ Common preprocessing steps include filtering, artifact removal, and normalizati
+on.
+ - Segment the data into epochs.
+ This involves dividing the continuous EEG signal into smaller, manageable
+ chunks, often aligned with specific events or stimuli.
+\end_layout
+
+\begin_layout Standard
+3.
+ **Feature Extraction:** - Extract relevant features from the EEG epochs.
+ Common features include power spectral density, time-domain features, and
+ statistical measures.
+\end_layout
+
+\begin_layout Standard
+4.
+ **Data Splitting:** - Split your data into training, validation, and test
+ sets.
+ This is crucial for evaluating your model's performance on unseen data.
+\end_layout
+
+\begin_layout Standard
+5.
+ **Build a Neural Network Model:** - Choose or design a neural network architect
+ure suitable for your task.
+ For time-series data like EEG, recurrent neural networks (RNNs) or long
+ short-term memory networks (LSTMs) are often used.
+ Alternatively, you can use 1D convolutional neural networks (CNNs).
+\end_layout
+
+\begin_layout Standard
+6.
+ **Model Training:** - Train your neural network on the training dataset.
+ Use the validation set to monitor the model's performance and prevent overfitti
+ng.
+ - Experiment with different hyperparameters, architectures, and regularization
+ techniques to improve performance.
+\end_layout
+
+\begin_layout Standard
+7.
+ **Evaluation:** - Evaluate your trained model on the test set to assess
+ its generalization to new, unseen data.
+ - Use appropriate metrics for your task, such as accuracy, precision, recall,
+ or specific metrics relevant to EEG analysis.
+\end_layout
+
+\begin_layout Standard
+8.
+ **Interpretation:** - Interpret the results and gain insights into the
+ neural network's performance.
+ Understand which features contribute most to the model's predictions.
+\end_layout
+
+\begin_layout Standard
+9.
+ **Fine-Tuning and Optimization:** - If necessary, fine-tune your model
+ or explore advanced techniques to improve performance, such as transfer
+ learning or ensemble methods.
+\end_layout
+
+\begin_layout Standard
+10.
+ **Documentation and Reporting:** - Document your approach, findings, and
+ any challenges faced during the analysis.
+ This is crucial for reproducibility and collaboration.
+\end_layout
+
+\begin_layout Standard
+Remember that the specific steps and techniques may vary based on the nature
+ of your EEG data and the task you are trying to solve.
+ Always adapt your approach based on the characteristics of your data and
+ the goals of your analysis.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+Paper: A Tutorial on Human Activity Recognition Using Body-Worn Inertial
+ Sensors 
+\end_layout
+
+\begin_layout Standard
+Reference: (ANDREAS BULLING, Max Planck Institute for Informatics, Germany
+ ULF BLANKE, Swiss Federal Institute of Technology (ETH) Zurich, Switzerland
+ BERNT SCHIELE, Max Planck Institute for Informatics, Germany).
+\end_layout
+
+\begin_layout Standard
+while recognizing the task of brushing one's teeth.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ActivityRecognitionChain.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Raw signals ($D$) are first processed ($D'$) and split into $m$ segments
+ ($W_i$) from which feature vectors ($X_i$) are extracted.
+ Given features ($X_i$), a model with parameters $
+\backslash
+theta$ scores $c$ activity classes $Y_i = 
+\backslash
+{y^1, 
+\backslash
+ldots, y^c
+\backslash
+}$ with a confidence vector $p_i$.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+EEG devices:
+\end_layout
+
+\begin_layout Standard
+list about the available EEG devices and relative information like frequency,
+ cost, number of sensor and their position and type, etc.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Emotiv Epoc+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Emotiv Insight
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Muse 2 (2018) InteraXon
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Muse InteraXon (2014)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Neurosky Mindwave
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+cost
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+800 $
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+300 $
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+250 $
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+150 $
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+80 $
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+frequency(sample rate)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+128-256 Hz
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+128 Hz
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+256-500 Hz
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+220 - 500 Hz
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+128 Hz
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+number of sensor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document
